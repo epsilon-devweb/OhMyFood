@@ -1,3 +1,52 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 @use '../utils/keyframes'as *;
+
+// RESET
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background-color: $primary-background;
+    font-family: $font-family-primary;
+  }
+  
+  img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  .fa-utensils,
+  .fa-handshake-angle {
+      color: $color-white;
+  }
+  
+  .fa-mobile-screen-button,
+  .fa-list-ul,
+  .fa-store {
+      color: $grey2;
+  }
+  
+  .fa-mobile-screen-button:hover,
+  .fa-list-ul:hover,
+  .fa-store:hover {
+      color: $color1;
+  }
+  
+  .fa-circle-check {
+    color: $color-white;
+  }

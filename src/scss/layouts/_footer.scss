@@ -1,3 +1,74 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 @use '../utils/keyframes'as *;
+
+// FOOTER GENERAL
+
+.footer {
+    @include flex-column;
+    background-color: $grey1;
+    padding: 30px 25px;
+    align-items: flex-start;
+    gap: 16px;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 50px;
+        padding: 30px 50px;
+
+    }
+
+    h2 {
+        display: flex;
+        color: $color-white;
+        font-family: $font-family-secondary;
+        font-size: $font-size-18;
+        font-weight: $font-weight-400;
+    }
+
+    .footer-link {
+        @include flex-column;
+        gap: 10px;
+
+        @include tablet {
+            @include flex-row;
+        }
+
+        .link1,
+        .link2 {
+            @include flex-row;
+            gap: 5px;
+
+            .fa-utensils,
+            .fa-handshake-angle {
+                width: 20px;
+                height: 16px;
+            }
+        }
+
+        .link3 {
+            @include flex-column;
+            gap: 10px;
+
+            @include tablet {
+                @include flex-row;
+
+                p {
+                    width: 130px;
+                }
+
+            }
+        }
+
+        p,
+        a {
+            color: $color-white;
+            font-family: $font-family-primary;
+            font-size: $font-size-16;
+            font-weight: $font-weight-400;
+            width: 168px;
+        }
+    }
+}

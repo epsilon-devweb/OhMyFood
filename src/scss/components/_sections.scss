@@ -1,3 +1,177 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 @use '../utils/keyframes'as *;
+
+// HOME PAGE SECTION INTRODUCTION
+
+.introduction {
+    @include flex-column;
+    justify-content: center;
+
+    .headline {
+        @include flex-center-column;
+        padding-bottom: 57px;
+        background-color: $secondary-background;
+
+        .headline__title {
+            text-align: center;
+            font-family: $font-family-primary;
+            font-size: $font-size-24;
+            font-weight: $font-weight-700;
+            padding: 40px 50px 15px;
+        }
+
+        .headline__subtitle {
+            @include font-title;
+            font-weight: $font-weight-300;
+            text-align: center;
+            padding-bottom: 27px;
+        }
+    }
+}
+
+// HOME PAGE SECTION INSTRUCTIONS
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $primary-background;
+    padding: 50px 20px 50px 20px;
+    gap: 25px;
+
+    @include desktop {
+        padding: 50px 180px;
+    }
+
+    h2 {
+        font-family: $font-family-primary;
+        font-size: $font-size-24;
+    }
+
+    .list__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .instructions__list {
+            @include flex-center-column;
+            gap: 25px;
+
+            @include tablet {
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row;
+            }
+
+            @include desktop {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .instructions__card {
+                @include flex-center-row;
+                width: 315px;
+                height: 72px;
+                font-weight: 500;
+                border-radius: 25px;
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+                background-color: $secondary-background;
+                gap: 15px;
+
+                @include tablet {
+                    min-width: 315px;
+                }
+
+                .instructions__content {
+                    @include flex-center-row;
+                    gap: 15px;
+
+                    .instructions__step {
+                        background-color: $color1;
+                        color: $color-white;
+                        border-radius: 150px;
+                        width: 24px;
+                        height: 24px;
+                        padding: 3px;
+                        margin-left: -90px;
+                        text-align: center;
+                    }
+
+                    p {
+                        @include font-body;
+                        width: 180px;
+                        font-weight: $font-weight-500;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+
+// HOME PAGE SECTION RESTAURANTS
+
+.restaurants {
+    background-color: $secondary-background;
+    @include flex-column;
+    padding: 0px 20px 66px 20px;
+
+    @include tablet {
+        padding: 0px 20px 30px 20px;
+    }
+
+    @include desktop {
+        padding: 50px 180px;
+    }
+
+    .restaurants__title {
+        padding: 30px 0px 24px;
+
+        h2 {
+            font-family: $font-family-primary;
+            font-size: $font-size-24;
+            font-weight: $font-weight-700;
+        }
+    }
+}
+
+// RESTAURANTS PAGE SECTION CONTAINER
+
+.container {
+    background-color: #f6f6f6;
+    margin-top: -3em;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+
+    @include tablet {
+        margin: -48px 192px 0px 192px;
+    }
+
+    .container__header {
+        @include flex-center;
+        font-family: shrikhand;
+        font-weight: 400;
+        padding: 30px 17px;
+
+        .container__header--title {
+            @include flex-row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0px 17px;
+
+            @include tablet {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            h2 {
+                font-size: 28px;
+                font-weight: 400;
+            }
+        }
+    }
+}

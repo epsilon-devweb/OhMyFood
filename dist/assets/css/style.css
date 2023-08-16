@@ -28,5 +28,720 @@
     opacity: 1;
   }
 }
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+.fa-utensils,
+.fa-handshake-angle {
+  color: #FFFFFF;
+}
+
+.fa-mobile-screen-button,
+.fa-list-ul,
+.fa-store {
+  color: #7E7E7E;
+}
+
+.fa-mobile-screen-button:hover,
+.fa-list-ul:hover,
+.fa-store:hover {
+  color: #9356DC;
+}
+
+.fa-circle-check {
+  color: #FFFFFF;
+}
+
+.loader {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  animation: loader 1s ease-in-out 3s forwards;
+  pointer-events: none;
+}
+.loader .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  animation: spin;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 3;
+  animation-duration: 1.5s;
+}
+
+.menu__part1 {
+  animation: appear;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+}
+
+.menu__part2 {
+  animation: appear;
+  animation-timing-function: ease-in-out;
+  animation-duration: 4s;
+}
+
+.menu__part3 {
+  animation: appear;
+  animation-timing-function: ease-in-out;
+  animation-duration: 6s;
+}
+
+.headline__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 220px;
+  height: 50px;
+  border-radius: 1.5em;
+  border: none;
+  color: #FFFFFF;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.headline__button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.35);
+}
+
+.heart__button {
+  position: relative;
+  width: 22px;
+  height: 21px;
+}
+.heart__button svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.heart__button svg:first-of-type {
+  opacity: 0;
+}
+.heart__button svg:first-of-type:hover {
+  opacity: 1;
+}
+.heart__button svg:last-of-type {
+  opacity: 1;
+}
+.heart__button svg:last-of-type:hover {
+  opacity: 0;
+}
+.heart__button:hover svg:first-of-type {
+  opacity: 1;
+}
+.heart__button .heart__button--outline {
+  fill: none;
+  stroke: #101010;
+  opacity: 1;
+}
+
+.command {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.command .command__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 220px;
+  height: 50px;
+  border-radius: 1.5em;
+  border: none;
+  color: #FFFFFF;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.command .command__button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.35);
+}
+
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 100px;
+  }
+}
+.restaurants__cards .card {
+  position: relative;
+  width: 100%;
+  height: 251px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.restaurants__cards .card:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+}
+.restaurants__cards .card a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.restaurants__cards .card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 175px;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurants__cards .card .card__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 25px;
+  width: 100%;
+  height: 70px;
+}
+.restaurants__cards .card .card__content .card__text {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 13px;
+  gap: 5px;
+}
+.restaurants__cards .card .card__content .card__text .card__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  width: 100%;
+}
+.restaurants__cards .card .card__content .card__text .card__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  border-radius: 2px;
+  background: #99E2D0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 80px;
+  height: 29px;
+}
+.restaurants__cards .card .card__content .card__text .card__badge p {
+  color: #008766;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+}
+.restaurants__cards .card .card__content .card__text .card__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.065rem;
+  font-weight: 300;
+  width: 100%;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EAEAEA;
+  width: 100%;
+  height: 50px;
+  gap: 17px;
+}
+.searchbar #location__input {
+  width: 130px;
+  border: none;
+  outline: none;
+  background-color: #EAEAEA;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.searchbar #location__input::placeholder {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+.menu {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+.menu .menu__part1,
+.menu .menu__part2,
+.menu .menu__part3 {
+  box-sizing: border-box;
+  padding-bottom: 40px;
+}
+.menu .menu__part1 .part,
+.menu .menu__part2 .part,
+.menu .menu__part3 .part {
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu__part1 .part .part__title,
+.menu .menu__part2 .part .part__title,
+.menu .menu__part3 .part .part__title {
+  margin-left: 12px;
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.menu .menu__part1 .part .part__title--line,
+.menu .menu__part2 .part .part__title--line,
+.menu .menu__part3 .part .part__title--line {
+  width: 48px;
+  border: 1.5px solid #99E2D0;
+  margin-left: 12px;
+  margin-bottom: 16px;
+}
+.menu .menu__part1 .choice,
+.menu .menu__part2 .choice,
+.menu .menu__part3 .choice {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu .menu__part1 .choice .choice__card,
+.menu .menu__part2 .choice .choice__card,
+.menu .menu__part3 .choice .choice__card {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  height: 69px;
+  overflow: hidden;
+}
+.menu .menu__part1 .choice .choice__card:hover > .choice__card__check,
+.menu .menu__part2 .choice .choice__card:hover > .choice__card__check,
+.menu .menu__part3 .choice .choice__card:hover > .choice__card__check {
+  margin: 0;
+  transition: all 0.8s;
+}
+.menu .menu__part1 .choice .choice__card .choice__card__txt,
+.menu .menu__part2 .choice .choice__card .choice__card__txt,
+.menu .menu__part3 .choice .choice__card .choice__card__txt {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: space-between;
+  width: auto;
+  flex: 1;
+  padding-left: 20px;
+}
+.menu .menu__part1 .choice .choice__card .choice__card__txt .choice__card__txt--title,
+.menu .menu__part2 .choice .choice__card .choice__card__txt .choice__card__txt--title,
+.menu .menu__part3 .choice .choice__card .choice__card__txt .choice__card__txt--title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 12px;
+}
+.menu .menu__part1 .choice .choice__card .choice__card__txt .choice__card__txt--subtitle,
+.menu .menu__part2 .choice .choice__card .choice__card__txt .choice__card__txt--subtitle,
+.menu .menu__part3 .choice .choice__card .choice__card__txt .choice__card__txt--subtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  padding-bottom: 12px;
+}
+.menu .menu__part1 .choice .choice__card .choice__card__price,
+.menu .menu__part2 .choice .choice__card .choice__card__price,
+.menu .menu__part3 .choice .choice__card .choice__card__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 69px;
+  height: 100%;
+  padding-top: 25px;
+}
+.menu .menu__part1 .choice .choice__card .choice__card__price span,
+.menu .menu__part2 .choice .choice__card .choice__card__price span,
+.menu .menu__part3 .choice .choice__card .choice__card__price span {
+  font-weight: 700;
+  font-size: 15px;
+}
+.menu .menu__part1 .choice .choice__card .choice__card__check,
+.menu .menu__part2 .choice .choice__card .choice__card__check,
+.menu .menu__part3 .choice .choice__card .choice__card__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 69px;
+  height: 100%;
+  margin-right: -69px;
+  background-color: #99E2D0;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.introduction .headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 57px;
+  background-color: #F6F6F6;
+}
+.introduction .headline .headline__title {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 40px 50px 15px;
+}
+.introduction .headline .headline__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 27px;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+  padding: 50px 20px 50px 20px;
+  gap: 25px;
+}
+@media screen and (min-width: 1440px) {
+  .instructions {
+    padding: 50px 180px;
+  }
+}
+.instructions h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+}
+.instructions .list__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.instructions .list__container .instructions__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+@media screen and (min-width: 1024px) {
+  .instructions .list__container .instructions__list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .instructions .list__container .instructions__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.instructions .list__container .instructions__list .instructions__card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 315px;
+  height: 72px;
+  font-weight: 500;
+  border-radius: 25px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  background-color: #F6F6F6;
+  gap: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .instructions .list__container .instructions__list .instructions__card {
+    min-width: 315px;
+  }
+}
+.instructions .list__container .instructions__list .instructions__card .instructions__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.instructions .list__container .instructions__list .instructions__card .instructions__content .instructions__step {
+  background-color: #9356DC;
+  color: #FFFFFF;
+  border-radius: 150px;
+  width: 24px;
+  height: 24px;
+  padding: 3px;
+  margin-left: -90px;
+  text-align: center;
+}
+.instructions .list__container .instructions__list .instructions__card .instructions__content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 180px;
+  font-weight: 500;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px 66px 20px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    padding: 0px 20px 30px 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .restaurants {
+    padding: 50px 180px;
+  }
+}
+.restaurants .restaurants__title {
+  padding: 30px 0px 24px;
+}
+.restaurants .restaurants__title h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.container {
+  background-color: #f6f6f6;
+  margin-top: -3em;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: -48px 192px 0px 192px;
+  }
+}
+.container .container__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: shrikhand;
+  font-weight: 400;
+  padding: 30px 17px;
+}
+.container .container__header .container__header--title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0px 17px;
+}
+@media screen and (min-width: 1024px) {
+  .container .container__header .container__header--title {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.container .container__header .container__header--title h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.home__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 113px;
+}
+.home__header .header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 63px;
+  padding: 13px 89px 13px 89px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.home__header .header__logo img {
+  width: 197px;
+  height: 34px;
+}
+
+.page__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+}
+.page__header .goback__button {
+  position: initial;
+  padding-left: 16px;
+  font-size: 24px;
+}
+.page__header .page__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 63px;
+  padding: 13px 89px 13px 49px;
+}
+.page__header .page__logo img {
+  width: 197px;
+  height: 34px;
+}
+
+.page__banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 275px;
+}
+@media screen and (min-width: 1024px) {
+  .page__banner img {
+    height: 383px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 30px 25px;
+  align-items: flex-start;
+  gap: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+    padding: 30px 50px;
+  }
+}
+.footer h2 {
+  display: flex;
+  color: #FFFFFF;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.footer .footer-link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .footer .footer-link {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.footer .footer-link .link1,
+.footer .footer-link .link2 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.footer .footer-link .link1 .fa-utensils,
+.footer .footer-link .link1 .fa-handshake-angle,
+.footer .footer-link .link2 .fa-utensils,
+.footer .footer-link .link2 .fa-handshake-angle {
+  width: 20px;
+  height: 16px;
+}
+.footer .footer-link .link3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .footer .footer-link .link3 {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer .footer-link .link3 p {
+    width: 130px;
+  }
+}
+.footer .footer-link p,
+.footer .footer-link a {
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 168px;
+}
 
 /*# sourceMappingURL=style.css.map */
