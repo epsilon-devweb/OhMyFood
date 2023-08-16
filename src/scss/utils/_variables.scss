@@ -1,0 +1,80 @@
+// VARIABLES DE COULEURS
+
+$color1: #9356DC;
+$color2: #FF79DA;
+$color3: #99E2D0;
+$color4: #008766;
+$color5: #89C8FA;
+$color6: #003A68;
+
+
+// VARIABLES TEINTES DE GRIS
+
+$grey1: #353535;
+$grey2: #7E7E7E;
+$grey3: #EAEAEA;
+$grey4: #F6F6F6;
+
+// VARIABLES NOIR & BLANC
+
+$color-black: #000000;
+$color-white: #FFFFFF;
+
+// VARIABLES COULEUR D'ARRIERE PLAN
+
+$primary-background: $color-white;
+$secondary-background: $grey4;
+
+// VARIABLES DÉGRADÉS
+
+$gradient1: linear-gradient(175deg, $color2 0%, $color1 100%);
+
+// VARIABLES OMBRES
+
+$shadow-color: rgba(0, 0, 0, 0.25);
+$shadow-hover-color: rgba(0, 0, 0, 0.35);
+
+// VARIABLES STYLE DE POLICES
+
+$font-family-primary: 'Roboto', sans-serif;
+$font-family-secondary: 'Shrikhand', cursive;
+
+// VARIABLES TAILLES DE POLICES
+
+$font-size-40: 2.5rem;
+$font-size-30: 1.875rem;
+$font-size-28: 1.75rem;
+$font-size-24: 1.5rem;
+$font-size-20: 1.25rem;
+$font-size-18: 1.125rem;
+$font-size-17: 1.065rem;
+$font-size-16: 1rem;
+$font-size-15: 0.9375rem;
+$font-size-14: 0.875rem;
+
+// VARIABLES EPAISSEUR DE POLICES
+
+$font-weight-700: 700;
+$font-weight-500: 500;
+$font-weight-400: 400;
+$font-weight-300: 300;
+
+// VARIABLES HAUTEUR DE LIGNES
+
+$line-height-title: 1.2;
+$line-height-body: 1.5;
+
+// VARIABLES BORDURES
+
+$border-radius: 1.5em;
+$card-border-radius: 1em;
+$card-img-border-radius: 1em 1em 0 0;
+
+// VARIABLES TAILLES D'ECRANS
+
+$tablet : 1024px;
+$desktop : 1440px;
+
+// VARIABLES Z-INDEX
+
+$z-index1: 1;
