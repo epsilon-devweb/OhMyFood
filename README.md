@@ -1,6 +1,9 @@
 # Quatrième projet du parcours "Intégrateur web" chez OpenClassroom.
 L'objectif étant d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass.
 
+# Lien vers GitPages :
+[OhMyFood](https://unknxwn-dev.github.io/OhMyFood/dist/index.html)
+
 # Ressources mises à disposition :
 [Guide étapes.pdf](https://github.com/Unkn0wnUser-dev/OhMyFood/files/12297769/Guide.etapes.pdf)  
 [Brief Créatif.pdf](https://github.com/Unkn0wnUser-dev/OhMyFood/files/12297768/Brief.Creatif.pdf) + images et textes.
