@@ -5,8 +5,8 @@ L'objectif étant d'intégrer puis de dynamiser une page web avec des animations
 [OhMyFood](https://epsilon-devweb.github.io/ohmyfood-main/dist/index.html)
 
 # Ressources mises à disposition :
-[Guide étapes.pdf](https://github.com/Unkn0wnUser-dev/OhMyFood/files/12297769/Guide.etapes.pdf)  
-[Brief Créatif.pdf](https://github.com/Unkn0wnUser-dev/OhMyFood/files/12297768/Brief.Creatif.pdf) + images et textes.
+[Guide étapes.pdf](https://github.com/epsilon-devweb/OhMyFood/files/12297769/Guide.etapes.pdf)  
+[Brief Créatif.pdf](https://github.com/epsilon-devweb/OhMyFood/files/12297768/Brief.Creatif.pdf) + images et textes.
 
 # Objectifs
 - Développer un site proposant le menu de 4 grands restaurants parisiens.  
