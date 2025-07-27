@@ -1,4 +1,4 @@
-# Quatrième projet du parcours "Intégrateur web" chez OpenClassroom.
+# Quatrième projet du parcours "Intégrateur web" chez OpenClassrooms.
 L'objectif étant d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass.
 
 # Lien vers GitPages :
