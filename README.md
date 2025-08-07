@@ -1,67 +1,42 @@
-# Quatrième projet du parcours "Intégrateur web" chez OpenClassrooms.
-L'objectif étant d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass.
+# OpenClassrooms Restaurant OhMyFood
 
-# Lien vers GitPages :
-[OhMyFood](https://epsilon-devweb.github.io/ohmyfood-main/dist/index.html)
+Dans ce projet, vous allez développer l'interface mobile-first d'un site web pour une start-up en utilisant Sass. Vous intégrerez des maquettes pour mobile et desktop, en mettant l'accent sur la conception adaptative et réactive. Vous enrichirez l'expérience utilisateur avec des animations CSS.
 
-# Ressources mises à disposition :
-[Guide étapes.pdf](https://github.com/epsilon-devweb/OhMyFood/files/12297769/Guide.etapes.pdf)  
-[Brief Créatif.pdf](https://github.com/epsilon-devweb/OhMyFood/files/12297768/Brief.Creatif.pdf) + images et textes.
+## Objectifs du Projet
 
-# Objectifs
-- Développer un site proposant le menu de 4 grands restaurants parisiens.  
-- Permettre la réservation en ligne et la composition de menus.
+- **Développer un site "mobile first"** : Le site doit être optimisé pour les appareils mobiles, puis adapté pour les tablettes et les ordinateurs.
+- **Intégrer des animations CSS** : Utiliser des animations et transitions CSS pour améliorer l'expérience utilisateur, sans recourir à JavaScript.
+- **Respecter les maquettes** : Suivre rigoureusement les maquettes fournies par notre UX designer pour garantir une cohérence visuelle.
+- **Utiliser Sass** : Structurer et organiser notre code CSS en utilisant le préprocesseur Sass.
 
-# Technologies
-- Le développement doit se faire en CSS avec Sass, sans JavaScript.  
-- Le site devra être réalisé en adoptant le Mobile First.  
-- Aucun framework ne devra être utilisé.  
-- Aucun code CSS ne doit être appliqué via un attribut style dans une balise HTML.
+## Ressources mises à disposition :
+[Brief créatif](./BriefCreatif.pdf) <br/>
+[Maquette figma](https://www.figma.com/design/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood--mobile-et-desktop-?node-id=0-1&p=f)
 
-# Identité graphique
-- Polices des Logo & titres : Shrikhand  
-Texte : Roboto  
-- Couleurs  
-Primaire : #9356DC  
-Secondaire : #FF79DA  
-Tertiaire : #99E2D0
+## Technologies
 
-# Compatibilité
-Le site sera développé en utilisant l’approche mobile-first.  
-Il devra donc être intégré en suivant les maquettes mobile, puis le responsive suivra pour les tablettes et ordinateurs en suivant les maquettes ordinateur données par notre designer.  https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood-(mobile-et-desktop)?type=design&node-id=0-1&mode=design&t=1MILkCUgVw9kDXtT-0  
-- L’ensemble du site devra être responsive sur mobile, tablette et desktop.  
-- Les pages devront passer la validation W3C en HTML et CSS sans erreur.  
-- Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
+- **HTML et CSS** : Pour la structure et le style du site.
+- **Sass** : Pour organiser et structurer notre code CSS.
+- **Animations CSS** : Pour ajouter des effets visuels et améliorer l'interactivité.
 
-# Effets graphiques et animations
-Les effets accessibles au clic ou au survol sont visibles sur la maquette. Ils devront utiliser les animations ou transitions CSS, pas de JavaScript ni de librairie. Pour toutes les animations, afin de soigner le rendu du site, il est important que lorsque nous avons un effet au hover ou lors d’un clic, nous ayons l’effet inverse lorsque l’on quitte le survol.
+## Choix Techniques
 
-# Boutons
-- Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.  
-L’ombre portée devra également être plus visible.  
-- À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, un bouton "J’aime" en forme de cœur est présent sur la maquette. Au clic, il devra se remplir progressivement. Pour cette première version, l’effet peut apparaître au survol sur desktop au lieu du clic.
+1. **Animation du Cœur** :
+   - Une transition CSS a été utilisée pour l'animation du bouton "J'aime" en forme de cœur. Au survol, le cœur s'agrandit et se remplit progressivement de couleur grâce aux propriétés `transform` et `fill`.
 
-# Page d’accueil
-- Quand l’application aura plus de menus, un “loader” sera nécessaire. Sur cette maquette, nous souhaitons en avoir un aperçu. Il devra apparaître pendant 1 à 3 secondes quand on arrive sur la page d'accueil, couvrir l'intégralité de l'écran, et utiliser les animations CSS (pas de librairie). Le design de ce loader n’est pas défini, toute proposition est donc la bienvenue tant qu’elle est cohérente avec la charte graphique du site.
+2. **Sélecteur de Plat** :
+   - Une animation de coulissage a été implémentée pour le sélecteur de plat. Au survol d'un plat, une coche apparaît à droite et se déplace de droite à gauche en utilisant la propriété `transform`.
 
-# Pages de menu
-- À l’arrivée sur la page, les plats devront apparaître progressivement avec un léger décalage dans le temps. Ils pourront apparaître soit un par un, soit par groupe “Entrée”, “Plat” et “Dessert”.  
-- Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus. Cela fait apparaître une petite coche à droite du plat. Cette coche devra coulisser de la droite vers la gauche. Pour cette première version, l’effet peut apparaître au survol sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il devra être rogné avec des points de suspension.
+3. **Loader de la Page d'Accueil** :
+   - Un loader a été créé avec une animation CSS simple mais efficace. Il apparaît pendant 1 à 3 secondes et couvre tout l'écran. Le loader est cohérent avec la charte graphique.
 
-# Livrables attendus
-Page d’accueil (x1)  
-- Affichage de la localisation des restaurants. À terme, il sera possible de choisir sa localisation pour trouver des restaurants proches d’un certain lieu.  
-- Une courte présentation de l’entreprise.  
-- Une section contenant les 4 menus sous forme de cartes. Au clic sur la carte, l’utilisateur est redirigé vers la page du menu.
+4. **Approche Mobile First** :
+   - Le développement a commencé par une optimisation pour les appareils mobiles. Des media queries ont été utilisées pour adapter le design aux tablettes et aux ordinateurs, garantissant ainsi une expérience utilisateur optimale sur tous les appareils.
 
-Pages de menu (x4)  
-- 4 pages contenant chacune le menu d’un restaurant.   
-__Footer__  
-- Le footer est identique sur toutes les pages.  
-- Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.  
-__Header__  
-- Le header est présent sur toutes les pages.  
-- Sur la page d’accueil, il contient le logo du site.  
-- Sur les pages de menu, il contient en plus un bouton de retour vers la page d’accueil.
+## Organisation du Code CSS avec Sass
 
+- **Variables** : Des variables Sass ont été utilisées pour définir les couleurs, les polices et les tailles, facilitant ainsi la maintenance et assurant la cohérence du code.
 
+- **Mixins** : Des mixins ont été créés pour les animations et les transitions, permettant une réutilisation du code et le rendant plus modulaire.
+
+- **Partials** : Le code CSS a été divisé en plusieurs fichiers partiels, chacun responsable d'une partie spécifique du site, comme `_header.scss`, `_menus.scss`, et `_animations.scss`.
